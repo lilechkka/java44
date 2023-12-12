@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Zarechny_KT4_JS_DOM</title>
+    <link href="styles.css" rel=stylesheet>
+</head>
+<body>
+    <div class="fl-row">
+        <div id="form">
+            <form id="card-form">
+                <select name="bank_name">
+                    <option value="" selected disabled hidden></option>
+                    <option>Сбербанк</option>
+                    <option>Альфабанк</option>
+                    <option>Тиньков</option>
+                </select><br>
+                <select name="card_type">
+                    <option value="" selected disabled hidden></option>
+                    <option>VISA</option>
+                    <option>MasterCard</option>
+                    <option>МИР</option>
+                </select><br>
+                <input type="text" name="card_number" maxlength="16" placeholder="0000 0000 0000 0000"><br>
+                <input type="text" name="card_holder" placeholder="Держатель карты" maxlength="23"><br>
+                <input type="text" name="month" placeholder="00" maxlength="2"class="date" > /
+                <input type="text" name="year" placeholder="00" maxlength="2" class="date" ><br>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <div id="card-mini" class="card-result fl-col">
+            <div id="card-result__card-bank"> </div>
+            <div id="card-result__card-number" class="font-25">0000 0000 0000 0000</div>
+            <div class="fl-row mt-40 ml-20 mr-20 fl-sb font-xl black">
+                <div id="card-result__card-holder" class="font-l">CARD HOLDER</div>
+                <div id="card-result__card-date">
+                    <span>00</span>
+                    <span>/</span>
+                    <span>00</span>
+                </div>
+                <div id="card-result__card-type" class="mr-20 ml-20"></div>
+            </div>
+        </div>
+    </div>
+    <div id="card-history">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Название банка</th>
+                    <th>Тип карты</th>
+                    <th>Номер карты</th>
+                    <th>Держатель карты</th>
+                    <th>Дата окончания</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
